@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using FHStarterApp.Resources;
 using FHSDK;
+using FHSDK.Phone;
 
 namespace FHStarterApp
 {
@@ -28,7 +29,7 @@ namespace FHStarterApp
             base.OnNavigatedTo(e);
             try
             {
-                await FH.Init();
+                await FHClient.Init();
             }
             catch (Exception ex)
             {

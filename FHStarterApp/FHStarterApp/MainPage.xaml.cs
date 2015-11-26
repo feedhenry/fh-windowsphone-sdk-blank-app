@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using FHStarterApp.Resources;
-using FHSDK;
 using FHSDK.Phone;
 
 namespace FHStarterApp
@@ -24,14 +16,14 @@ namespace FHStarterApp
             //BuildLocalizedApplicationBar();
         }
 
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             try
             {
                 await FHClient.Init();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                
             }

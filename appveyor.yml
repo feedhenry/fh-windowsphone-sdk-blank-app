@@ -1,11 +1,6 @@
 version: 1.0.{build}
 before_build:
-- ps: >-
-    cd FHStarterApp
-
-    nuget restore
-
-    cd ..
+- nuget restore
 build:
-  project: FHStarterApp\FHStarterApp.sln
-  verbosity: detailed
+  project: FHStarterApp.sln
+  verbosity: minimal
